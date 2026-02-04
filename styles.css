@@ -1,0 +1,844 @@
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a,
+img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #3B5941;
+    background-color: #f4f1ee;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f1ee;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    margin-top: 100px;
+    /* Add margin to account for fixed header */
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: row;
+    /* Aligns content side-by-side */
+    align-items: center;
+    /* Centers items vertically */
+    justify-content: space-between;
+    /* Spreads text and image to opposite sides */
+    padding: 100px 10% 60px 10%;
+    /* Adds side margins to match the screenshot */
+    text-align: left;
+    /* Aligns text to the left */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Text Content styling */
+.intro-content {
+    flex: 1;
+    /* Allows text to take up half the space */
+    max-width: 600px;
+    margin-bottom: 0;
+    /* Removes bottom margin from previous centered version */
+}
+
+.intro-content h1 {
+    font-size: 3.5rem;
+    /* Larger font size to match reference */
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #3B5941;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #4a4a4a;
+}
+
+/* Image Container styling */
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* Pushes image to the far right */
+}
+
+.intro-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    /* Reset margins */
+    padding: 0;
+    align-items: center;
+}
+
+.intro-nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.intro-nav-links li:not(:last-child)::after {
+    content: "|";
+    color: #b0b0b0;
+    margin-left: 15px;
+    font-weight: 300;
+}
+
+.intro-nav-links li a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.intro-nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+/* The vertical separator line (|) */
+.intro-nav-links li:not(:last-child)::after {
+    content: "|";
+    color: #b0b0b0;
+    /* Light gray for the separator */
+    margin-left: 15px;
+    font-weight: 300;
+}
+
+.intro-nav-links li a {
+    text-decoration: none;
+    color: #b0b0b0;
+    /* Light gray text like the screenshot */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover state to make it interactive */
+.intro-nav-links li a:hover {
+    color: #3B5941;
+    /* Changes to brand green on hover */
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 550px;
+    /* Adjust size based on your specific image asset */
+    height: auto;
+    border-radius: 0;
+    /* Usually no border-radius for the plant cutout */
+    margin-top: 0;
+}
+
+.cta-button {
+    background-color: #3B5941;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #2A4030;
+}
+
+.intro-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Death Section */
+.death {
+    background-color: #A3B59C;
+    /* Updated background color */
+    padding: 60px 20px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.death-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.death-header h1 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    /* Updated text color */
+}
+
+.death-cause {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.death-cause img {
+    width: 30px;
+    /* Adjusted icon size */
+    height: 30px;
+    margin-right: 10px;
+}
+
+.death-cause h2 {
+    font-size: 1.5rem;
+    color: #3B5941;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    /* Align icon and text */
+}
+
+.death-cause p {
+    font-size: 1rem;
+    color: #3B5941;
+    /* Updated text color */
+}
+
+/* Grid Layout for Death Section */
+.death-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns for square formation */
+    gap: 20px;
+    justify-items: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Video Section */
+.video {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    /* Stack content vertically */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin: 60px auto;
+}
+
+.video-header h1 {
+    font-size: 2rem;
+    color: #3B5941;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.video-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.video-works {
+    flex: 1;
+    text-align: left;
+}
+
+.video-works h2 {
+    font-size: 1.5rem;
+    color: #3B5941;
+    margin-bottom: 20px;
+}
+
+.video-works ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-works ol li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #E8F0E8;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #3B5941;
+    font-weight: bold;
+}
+
+.video-works ol li::before {
+    content: counter(li);
+    counter-increment: li;
+    display: inline-block;
+    background-color: #3B5941;
+    color: #FFFFFF;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.video-image {
+    flex: 1;
+    text-align: right;
+}
+
+.video-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Plant Image Section */
+.plant-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    height: 200px;
+    /* Adjust the height of the section */
+    overflow: hidden;
+    background-color: #F9F9F9;
+    /* Add background color to match the design */
+}
+
+.plant-image {
+    width: 100%;
+    max-width: 600px;
+    /* Limit the maximum width */
+    height: auto;
+    object-fit: contain;
+    /* Ensure the image fits within the container */
+    position: relative;
+    z-index: 1;
+    /* Ensure the image is above the background */
+}
+
+/* Add a decorative element to divide the page */
+.plant-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #A3B59C 50%, #F9F9F9 50%);
+    z-index: 0;
+}
+
+/* Reviews Section */
+.bull {
+    background-color: #F9F9F9;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 60px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bull-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bull-header h1 {
+    font-size: 2rem;
+    color: #3B5941;
+    margin-bottom: 20px;
+}
+
+.bull-cause {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bull-cause img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.bull-cause h2 {
+    font-size: 1.5rem;
+    color: #3B5941;
+    margin-bottom: 10px;
+}
+
+.bull-cause p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Product Section */
+.product {
+    background-color: #F4F0EB;
+    /* Updated background color to match the provided design */
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+    border-radius: 10px;
+    /* Add rounded corners */
+}
+
+.product-header h1 {
+    font-size: 2rem;
+    color: #3B5941;
+    margin-bottom: 40px;
+}
+
+.product-cause {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    /* Enable positioning for the icon */
+}
+
+.product-cause img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    /* Position the icon at the top */
+    right: 10px;
+    /* Position the icon to the right */
+}
+
+.product-cause h2 {
+    font-size: 1.5rem;
+    color: #3B5941;
+    margin-bottom: 10px;
+}
+
+.product-cause p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 10px;
+    /* Add spacing between the header and the paragraph */
+}
+
+.product-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Apps Section */
+.apps {
+    background-color: #F9F9F9;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    /* Stack header on top */
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.apps-header {
+    text-align: center;
+    /* Center align the header */
+    margin-bottom: 20px;
+}
+
+.apps-header h1 {
+    font-size: 2rem;
+    color: #3B5941;
+    margin-bottom: 20px;
+}
+
+.apps-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+
+.apps-works {
+    flex: 1;
+}
+
+.apps-works ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: list-counter;
+}
+
+.apps-works ol li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 60px;
+}
+
+.apps-works ol li::before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3B5941;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.apps-works h1 {
+    font-size: 1.5rem;
+    color: #3B5941;
+    margin-bottom: 5px;
+}
+
+.apps-works p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.apps-image {
+    flex: 1;
+    text-align: center;
+}
+
+.apps-image img {
+    width: 100%;
+    max-width: 400px;
+    /* Increase the maximum width of the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hyack {
+    background-color: #A3B59C;
+    /* Reduced side padding slightly to allow frames to expand wider */
+    padding: 60px 50px;
+    margin: 80px auto;
+    /* Increased max-width to expand the overall frame */
+    max-width: 1250px;
+    border-radius: 30px;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+/* Header adjusted for the larger frame */
+.hyack-header h1 {
+    color: #FFFFFF;
+    font-size: 2.8rem;
+    /* Increased size to match larger frame */
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Expanded Grid System */
+.hyack-items {
+    display: grid;
+    /* Re-balanced columns for a wider overall look */
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    /* Increased gap for a cleaner, high-end feel */
+    grid-template-areas:
+        "main item1 item2"
+        "main item3 item4";
+}
+
+/* Base Card Styling - Adjusted for larger scale */
+.hyack-item {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 30px;
+    /* Increased inner padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Main LeafyPod Card Scaling */
+.hyack-item:nth-child(1) {
+    grid-area: main;
+    padding: 50px;
+    /* Larger padding for the primary item */
+}
+
+.hyack-item:nth-child(1) img {
+    width: 95%;
+    max-width: 380px;
+    /* Increased max-width for the main unit */
+    height: auto;
+    margin: auto auto;
+}
+
+/* Accessory Cards Scaling */
+.hyack-item:not(:nth-child(1)) {
+    aspect-ratio: 1 / 1;
+}
+
+.hyack-item:not(:nth-child(1)) img {
+    width: 65%;
+    /* Increased icon size to fill larger cards */
+    max-width: 160px;
+    height: auto;
+    margin-bottom: auto;
+}
+
+.hyack-item h2 {
+    color: #3B5941;
+    font-size: 1.2rem;
+    /* Increased font size for legibility in larger cards */
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Decorative plant - scaled to remain prominent against larger frame */
+.hyack-header>img {
+    position: absolute;
+    bottom: -40px;
+    left: -90px;
+    /* Adjusted positioning for wider container */
+    width: 280px;
+    /* Increased size to balance the larger frame */
+    z-index: 10;
+    pointer-events: none;
+}
+
+.bull {
+    padding: 80px 20px;
+    background-color: #f4f1ee;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bull-header h1 {
+    font-size: 3.5rem;
+    color: #3B5941;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.bull-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Forces 3 even columns */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bull-cause {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    text-align: left;
+}
+
+/* --- Footer Section (End) --- */
+.end {
+    background-color: #ede7e0;
+    padding: 80px 0;
+    width: 100%;
+    position: relative;
+    /* For the plant positioning */
+    display: block;
+    clear: both;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    /* Grid: Logo/Text | Links | Contact */
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-logo {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+/* Positioning the Plant exactly like the photo */
+.end::after {
+    content: "";
+    background-image: url('images/plant_footer.png');
+    /* Replace with your leaf asset */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #3B5941;
+    font-weight: bold;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links img {
+    width: 24px;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-text {
+        flex-direction: column;
+        /* Stacks text on top of image for mobile */
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .intro-image {
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .video {
+        padding: 40px 20px;
+    }
+
+    .product {
+        padding: 40px 20px;
+    }
+
+    .apps {
+        padding: 40px 20px;
+    }
+
+    .hyack-items {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "main main"
+            "item1 item2"
+            "item3 item4";
+    }
+
+    .corner-plant {
+        display: none;
+        /* Hide plant on small screens to prevent horizontal scrolling */
+    }
+
+    .bull-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bull-cause {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo-section {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .end {
+        padding: 20px;
+    }
+}
